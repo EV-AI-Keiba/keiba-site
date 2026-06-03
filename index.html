@@ -8,368 +8,166 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     *{margin:0;padding:0;box-sizing:border-box}
-    :root{
-      --g:#00c853;--g2:#00e676;
-      --dark:#07070e;--card:#0f0f1a;--card2:#14141f;
-      --border:#22223a;--text:#e8e8f4;--sub:#8888aa;
-      --acc:#7c6fff;--warn:#ffd740;--red:#ff5252
-    }
+    :root{--g:#00c853;--g2:#00e676;--dark:#07070e;--card:#0f0f1a;--border:#22223a;
+          --text:#e8e8f4;--sub:#8888aa;--acc:#7c6fff;--warn:#ffd740;--red:#ff5252}
     html{scroll-behavior:smooth}
     body{background:var(--dark);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;line-height:1.65}
-
-    /* ── NAV ── */
-    nav{position:sticky;top:0;z-index:100;background:rgba(7,7,14,.92);backdrop-filter:blur(16px);
+    nav{position:sticky;top:0;z-index:100;background:rgba(7,7,14,.93);backdrop-filter:blur(16px);
         border-bottom:1px solid var(--border);padding:12px 5%;display:flex;align-items:center;justify-content:space-between}
-    .logo{font-size:1rem;font-weight:800;color:var(--g);letter-spacing:-.5px}
-    .logo span{color:var(--text)}
-    .nav-links{display:flex;gap:28px}
-    .nav-links a{color:var(--sub);text-decoration:none;font-size:.85rem;transition:color .2s}
+    .logo{font-size:1rem;font-weight:800;color:var(--g)}.logo span{color:var(--text)}
+    .nav-links{display:flex;gap:24px}.nav-links a{color:var(--sub);text-decoration:none;font-size:.84rem;transition:color .2s}
     .nav-links a:hover{color:var(--text)}
-    .nav-cta{background:var(--g);color:#000;padding:9px 22px;border-radius:8px;
-             text-decoration:none;font-weight:700;font-size:.85rem;transition:all .2s}
+    .nav-cta{background:var(--g);color:#000;padding:9px 22px;border-radius:8px;text-decoration:none;font-weight:700;font-size:.84rem;transition:all .2s}
     .nav-cta:hover{background:var(--g2);transform:translateY(-1px)}
-
-    /* ── HERO ── */
     .hero{min-height:90vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
           padding:100px 5% 60px;text-align:center;position:relative;overflow:hidden}
     .hero::before{content:'';position:absolute;inset:0;
-                  background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(0,200,83,.18) 0%,transparent 70%);
-                  pointer-events:none}
-    .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,83,.12);
-                border:1px solid rgba(0,200,83,.25);color:var(--g);padding:7px 18px;border-radius:100px;
-                font-size:.8rem;margin-bottom:28px;font-weight:600}
-    .hero h1{font-size:clamp(2.2rem,5.5vw,4rem);font-weight:900;line-height:1.1;margin-bottom:22px;letter-spacing:-1px}
-    .hero h1 .hl{color:var(--g)}
-    .hero h1 .hl2{color:var(--acc)}
-    .hero-desc{font-size:1.05rem;color:var(--sub);max-width:540px;margin:0 auto 16px}
-    .hero-proof{font-size:.88rem;color:var(--g);margin-bottom:40px;font-weight:600}
-    .hero-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:60px}
-    .btn-g{background:var(--g);color:#000;padding:15px 36px;border-radius:10px;text-decoration:none;
-            font-weight:800;font-size:1rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
-    .btn-g:hover{background:var(--g2);transform:translateY(-2px);box-shadow:0 10px 32px rgba(0,200,83,.35)}
-    .btn-o{background:transparent;color:var(--text);padding:15px 36px;border-radius:10px;text-decoration:none;
-            font-weight:600;font-size:1rem;border:1px solid var(--border);transition:all .2s}
+                  background:radial-gradient(ellipse 80% 50% at 50% -10%,rgba(0,200,83,.16) 0%,transparent 70%);pointer-events:none}
+    .badge{display:inline-flex;align-items:center;gap:8px;background:rgba(0,200,83,.12);border:1px solid rgba(0,200,83,.25);
+           color:var(--g);padding:7px 18px;border-radius:100px;font-size:.78rem;margin-bottom:28px;font-weight:600}
+    .hero h1{font-size:clamp(2rem,5.5vw,3.8rem);font-weight:900;line-height:1.1;margin-bottom:20px;letter-spacing:-1px}
+    .hl{color:var(--g)}.hl2{color:var(--acc)}
+    .hero-sub{font-size:1rem;color:var(--sub);max-width:520px;margin:0 auto 14px}
+    .hero-proof{font-size:.88rem;color:var(--g);margin-bottom:36px;font-weight:600}
+    .btn-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-bottom:52px}
+    .btn-g{background:var(--g);color:#000;padding:14px 34px;border-radius:10px;text-decoration:none;
+            font-weight:800;font-size:.95rem;transition:all .2s;display:inline-flex;align-items:center;gap:8px}
+    .btn-g:hover{background:var(--g2);transform:translateY(-2px);box-shadow:0 10px 28px rgba(0,200,83,.3)}
+    .btn-o{background:transparent;color:var(--text);padding:14px 34px;border-radius:10px;
+            text-decoration:none;font-weight:600;font-size:.95rem;border:1px solid var(--border);transition:all .2s}
     .btn-o:hover{border-color:var(--text)}
-
-    /* ヒーローKPI */
-    .hero-kpi{display:flex;gap:40px;justify-content:center;flex-wrap:wrap;
-              background:var(--card);border:1px solid var(--border);border-radius:20px;
-              padding:28px 40px;max-width:700px;width:100%}
-    .hkpi{text-align:center}
-    .hkpi .n{font-size:2rem;font-weight:900;color:var(--g)}
-    .hkpi .l{font-size:.75rem;color:var(--sub);margin-top:4px}
-
-    /* ── SECTION BASE ── */
-    .sec{padding:80px 5%;max-width:1100px;margin:0 auto}
-    .sec-head{margin-bottom:48px}
-    .sec-head h2{font-size:1.7rem;font-weight:800;margin-bottom:8px}
-    .sec-head p{color:var(--sub);font-size:.95rem}
-    .tag{display:inline-block;background:rgba(0,200,83,.12);color:var(--g);
-         padding:4px 12px;border-radius:100px;font-size:.75rem;font-weight:700;margin-bottom:16px}
-
-    /* ── 高額的中 ── */
-    .hit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-    .hit-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px;
-              display:flex;align-items:center;gap:16px;transition:border-color .2s}
-    .hit-card:hover{border-color:var(--g)}
-    .hit-rank{background:rgba(0,200,83,.15);color:var(--g);font-weight:800;font-size:.9rem;
-              padding:6px 12px;border-radius:8px;white-space:nowrap;min-width:48px;text-align:center}
-    .hit-info .invest{font-size:.78rem;color:var(--sub)}
-    .hit-info .profit{font-size:1.25rem;font-weight:800;color:var(--g)}
-    .hit-info .roi{font-size:.78rem;color:var(--warn)}
-
-    /* ── CHART ── */
-    .chart-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px}
-    .chart-title{font-size:.88rem;color:var(--sub);margin-bottom:20px;font-weight:600}
-
-    /* ── ランク表 ── */
-    .rank-table{width:100%;border-collapse:collapse;font-size:.88rem}
-    .rank-table th{text-align:left;padding:12px 16px;color:var(--sub);border-bottom:1px solid var(--border);font-weight:600}
-    .rank-table td{padding:14px 16px;border-bottom:1px solid rgba(34,34,58,.5)}
-    .rank-table tr:hover td{background:rgba(255,255,255,.02)}
-    .rank-badge{display:inline-block;padding:4px 10px;border-radius:6px;font-weight:700;font-size:.8rem}
-    .rank-s{background:rgba(0,200,83,.15);color:var(--g)}
-    .rank-a{background:rgba(255,215,64,.12);color:var(--warn)}
-    .rank-b{background:rgba(128,203,196,.12);color:#80cbc4}
-    .bar-wrap{background:var(--border);border-radius:100px;height:6px;width:120px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:8px}
-    .bar-fill{height:100%;border-radius:100px;background:var(--g)}
-
-    /* ── 仕組み ── */
-    .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-    .how-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:24px}
-    .how-icon{font-size:1.8rem;margin-bottom:12px}
-    .how-card h3{font-size:.95rem;font-weight:700;margin-bottom:8px}
-    .how-card p{font-size:.84rem;color:var(--sub);line-height:1.7}
-
-    /* ── ランク説明 ── */
-    .rank-desc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
-    .rd-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px}
-    .rd-card .rd-name{font-size:.95rem;font-weight:800;margin-bottom:6px}
-    .rd-card .rd-roi{font-size:1.4rem;font-weight:900;color:var(--g);margin-bottom:4px}
-    .rd-card .rd-desc{font-size:.8rem;color:var(--sub);line-height:1.65}
-    .rd-card .rd-stats{font-size:.75rem;color:var(--warn);margin-top:8px}
-
-    /* ── FAQ ── */
-    .faq-list{display:flex;flex-direction:column;gap:12px}
-    .faq-item{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-    .faq-q{padding:18px 20px;font-weight:700;font-size:.92rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
-    .faq-q::after{content:'＋';color:var(--g);font-size:1.1rem;transition:transform .3s}
-    .faq-item.open .faq-q::after{transform:rotate(45deg)}
-    .faq-a{display:none;padding:0 20px 18px;font-size:.87rem;color:var(--sub);line-height:1.75}
-    .faq-item.open .faq-a{display:block}
-
-    /* ── FLOW ── */
-    .flow{display:flex;gap:0;flex-wrap:wrap;justify-content:center}
-    .flow-step{flex:1;min-width:180px;text-align:center;padding:20px;position:relative}
-    .flow-step:not(:last-child)::after{content:'→';position:absolute;right:-8px;top:50%;transform:translateY(-50%);
-                                        color:var(--g);font-size:1.2rem}
-    .flow-num{width:40px;height:40px;border-radius:50%;background:rgba(0,200,83,.15);border:2px solid var(--g);
-              color:var(--g);font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
-    .flow-step h3{font-size:.88rem;font-weight:700;margin-bottom:4px}
-    .flow-step p{font-size:.78rem;color:var(--sub)}
-
-    /* ── CTA ── */
-    .cta-sec{padding:80px 5%;text-align:center}
-    .cta-box{background:linear-gradient(135deg,rgba(0,200,83,.08),rgba(124,111,255,.08));
-             border:1px solid rgba(0,200,83,.25);border-radius:24px;padding:64px 40px;max-width:720px;margin:0 auto}
-    .cta-box h2{font-size:2rem;font-weight:900;margin-bottom:12px}
-    .cta-box p{color:var(--sub);margin-bottom:36px;font-size:.95rem}
-    .cta-sub{margin-top:24px;font-size:.82rem;color:var(--sub)}
-    .cta-sub a{color:var(--acc);text-decoration:none}
-
-    /* ── FOOTER ── */
-    footer{border-top:1px solid var(--border);padding:36px 5%;text-align:center;color:var(--sub);font-size:.8rem}
-    footer .f-links{display:flex;gap:20px;justify-content:center;margin-bottom:16px;flex-wrap:wrap}
-    footer .f-links a{color:var(--sub);text-decoration:none;transition:color .2s}
-    footer .f-links a:hover{color:var(--text)}
-
-    /* ── RESPONSIVE ── */
-    @media(max-width:640px){
-      .nav-links{display:none}
-      .hero{padding:80px 5% 50px}
-      .hero-kpi{gap:24px;padding:20px}
-      .hkpi .n{font-size:1.6rem}
-      .flow-step:not(:last-child)::after{display:none}
-      .rank-table{font-size:.78rem}
-      .cta-box{padding:40px 20px}
-    }
-
-    /* Divider */
+    .hero-kpi{display:flex;gap:32px;justify-content:center;flex-wrap:wrap;
+              background:var(--card);border:1px solid var(--border);border-radius:20px;padding:26px 40px;max-width:720px;width:100%}
+    .hkpi{text-align:center}.hkpi .n{font-size:1.9rem;font-weight:900;color:var(--g)}.hkpi .l{font-size:.72rem;color:var(--sub);margin-top:4px}
+    .sec{padding:72px 5%;max-width:1100px;margin:0 auto}
+    .sec-head{margin-bottom:40px}.sec-head h2{font-size:1.6rem;font-weight:800;margin-bottom:8px}
+    .sec-head p{color:var(--sub);font-size:.9rem}
+    .tag{display:inline-block;background:rgba(0,200,83,.12);color:var(--g);padding:4px 12px;border-radius:100px;font-size:.72rem;font-weight:700;margin-bottom:14px}
     .divider{height:1px;background:linear-gradient(90deg,transparent,var(--border),transparent);margin:0 5%}
+    .chart-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:24px}
+    .chart-title{font-size:.84rem;color:var(--sub);margin-bottom:18px;font-weight:600}
+    .chart-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .chart-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
+    .hit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px}
+    .hit-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px;
+              display:flex;align-items:center;gap:14px;transition:border-color .2s}
+    .hit-card:hover{border-color:var(--g)}
+    .hit-rank{background:rgba(0,200,83,.15);color:var(--g);font-weight:800;font-size:.82rem;
+              padding:6px 10px;border-radius:8px;white-space:nowrap;text-align:center}
+    .hit-info .inv{font-size:.74rem;color:var(--sub)}.hit-info .prof{font-size:1.2rem;font-weight:800;color:var(--g)}
+    .hit-info .roi-txt{font-size:.72rem;color:var(--warn)}
+    .rank-tbl{width:100%;border-collapse:collapse;font-size:.84rem}
+    .rank-tbl th{text-align:left;padding:11px 14px;color:var(--sub);border-bottom:1px solid var(--border);font-weight:600;font-size:.76rem;text-transform:uppercase}
+    .rank-tbl td{padding:13px 14px;border-bottom:1px solid rgba(34,34,58,.4);vertical-align:middle}
+    .rank-tbl tr:hover td{background:rgba(255,255,255,.018)}
+    .rbadge{display:inline-block;padding:3px 9px;border-radius:6px;font-weight:700;font-size:.76rem}
+    .rs{background:rgba(0,200,83,.15);color:var(--g)}.ra{background:rgba(255,215,64,.12);color:var(--warn)}.rb{background:rgba(128,203,196,.1);color:#80cbc4}
+    .bar-bg{background:var(--border);border-radius:100px;height:5px;width:100px;overflow:hidden;display:inline-block;vertical-align:middle;margin-left:8px}
+    .bar-fill{height:100%;border-radius:100px}
+    .how-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px}
+    .how-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:22px}
+    .how-icon{font-size:1.7rem;margin-bottom:10px}.how-card h3{font-size:.9rem;font-weight:700;margin-bottom:7px}
+    .how-card p{font-size:.8rem;color:var(--sub);line-height:1.7}
+    .stat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
+    .stat-card{background:var(--card);border:1px solid var(--border);border-radius:11px;padding:16px;text-align:center}
+    .stat-card .sn{font-size:1.4rem;font-weight:800;color:var(--g)}.stat-card .sl{font-size:.74rem;color:var(--sub);margin-top:4px}
+    .stat-card .ss{font-size:.72rem;color:var(--sub)}.stat-card.warn .sn{color:var(--warn)}.stat-card.ok .sn{color:#80cbc4}
+    .flow{display:flex;gap:0;flex-wrap:wrap;justify-content:center}
+    .flow-step{flex:1;min-width:160px;text-align:center;padding:18px;position:relative}
+    .flow-step:not(:last-child)::after{content:'→';position:absolute;right:-6px;top:50%;transform:translateY(-50%);color:var(--g);font-size:1.1rem}
+    .flow-num{width:38px;height:38px;border-radius:50%;background:rgba(0,200,83,.14);border:2px solid var(--g);
+              color:var(--g);font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 9px}
+    .flow-step h3{font-size:.86rem;font-weight:700;margin-bottom:3px}.flow-step p{font-size:.76rem;color:var(--sub)}
+    .faq-list{display:flex;flex-direction:column;gap:10px}
+    .faq-item{background:var(--card);border:1px solid var(--border);border-radius:11px;overflow:hidden}
+    .faq-q{padding:16px 18px;font-weight:700;font-size:.88rem;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+    .faq-q::after{content:'＋';color:var(--g);font-size:1rem;transition:transform .3s}
+    .faq-item.open .faq-q::after{transform:rotate(45deg)}
+    .faq-a{display:none;padding:0 18px 16px;font-size:.84rem;color:var(--sub);line-height:1.75}
+    .faq-item.open .faq-a{display:block}
+    .cta-sec{padding:72px 5%;text-align:center}
+    .cta-box{background:linear-gradient(135deg,rgba(0,200,83,.08),rgba(124,111,255,.08));border:1px solid rgba(0,200,83,.22);
+             border-radius:22px;padding:56px 36px;max-width:700px;margin:0 auto}
+    .cta-box h2{font-size:1.9rem;font-weight:900;margin-bottom:12px}.cta-box p{color:var(--sub);margin-bottom:32px;font-size:.92rem}
+    .cta-sub{margin-top:20px;font-size:.8rem;color:var(--sub)}.cta-sub a{color:var(--acc);text-decoration:none}
+    .updated{font-size:.72rem;color:var(--sub);text-align:right;padding:8px 5%;opacity:.5}
+    footer{border-top:1px solid var(--border);padding:32px 5%;text-align:center;color:var(--sub);font-size:.78rem}
+    .f-links{display:flex;gap:18px;justify-content:center;margin-bottom:14px;flex-wrap:wrap}
+    .f-links a{color:var(--sub);text-decoration:none;transition:color .2s}.f-links a:hover{color:var(--text)}
+    @media(max-width:640px){
+      .nav-links{display:none}.hero{padding:80px 5% 50px}.hero-kpi{gap:20px;padding:18px}
+      .hkpi .n{font-size:1.5rem}.chart-grid-2,.chart-grid-3{grid-template-columns:1fr}
+      .flow-step:not(:last-child)::after{display:none}.rank-tbl{font-size:.76rem}.cta-box{padding:36px 18px}
+    }
   </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
   <span class="logo">🏇 <span>AI競馬予想</span></span>
   <div class="nav-links">
-    <a href="#results">実績</a>
-    <a href="#ranks">ランク</a>
-    <a href="#how">仕組み</a>
-    <a href="#faq">FAQ</a>
+    <a href="#results">実績</a><a href="#detail">詳細分析</a>
+    <a href="#ranks">ランク</a><a href="#how">仕組み</a><a href="#faq">FAQ</a>
   </div>
   <a href="https://bookers.tech/author/550868/" target="_blank" class="nav-cta">予想を見る →</a>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-badge">📊 実戦データ公開中 ・ 555戦の実績</div>
+  <div class="badge">📊 実戦データ公開中 ・ <span id="h-races">---</span>戦の実績</div>
   <h1>感情ゼロ。<span class="hl">AI</span>が<br><span class="hl2">期待値の歪み</span>を狙い撃つ</h1>
-  <p class="hero-desc">2つのAIが40以上の指標を分析し、オッズが実力より高い馬と低い馬を自動で選別。長期的にプラスになる買い目だけを提案します。</p>
-  <p class="hero-proof">✅ 実戦555戦で回収率178%・利益+79.6万円を達成</p>
-  <div class="hero-btns">
+  <p class="hero-sub">2つのAIが40以上の指標を分析し、オッズが実力より高い馬と低い馬を自動で選別。長期的にプラスになる買い目だけを提案します。</p>
+  <p class="hero-proof" id="h-proof">実戦データ読み込み中...</p>
+  <div class="btn-row">
     <a href="https://bookers.tech/author/550868/" target="_blank" class="btn-g">今週の予想を見る →</a>
     <a href="#results" class="btn-o">実績を確認する</a>
   </div>
   <div class="hero-kpi">
-    <div class="hkpi"><div class="n">178%</div><div class="l">通算回収率</div></div>
-    <div class="hkpi"><div class="n">555戦</div><div class="l">実戦データ数</div></div>
-    <div class="hkpi"><div class="n">+79.6万</div><div class="l">通算利益</div></div>
-    <div class="hkpi"><div class="n">204%</div><div class="l">先月回収率</div></div>
+    <div class="hkpi"><div class="n" id="k-roi">---%</div><div class="l">通算回収率</div></div>
+    <div class="hkpi"><div class="n" id="k-races">---戦</div><div class="l">実戦データ数</div></div>
+    <div class="hkpi"><div class="n" id="k-profit">+--万</div><div class="l">通算利益</div></div>
+    <div class="hkpi"><div class="n" id="k-last-roi">---%</div><div class="l">先月回収率</div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- 高額的中例 -->
+<!-- 高額的中 -->
 <div class="sec" id="results">
   <div class="sec-head">
     <div class="tag">💰 的中実績</div>
-    <h2>実際の高額的中例</h2>
+    <h2>高額的中例 TOP10</h2>
     <p>すべて実際に購入した馬券の実績です。バックテストではありません。</p>
   </div>
-  <div class="hit-grid">
-    <div class="hit-card">
-      <div class="hit-rank">🥇 S</div>
-      <div class="hit-info">
-        <div class="invest">投資 13,000円</div>
-        <div class="profit">+282,280円</div>
-        <div class="roi">回収率 2,271%</div>
-      </div>
-    </div>
-    <div class="hit-card">
-      <div class="hit-rank">👑 SS</div>
-      <div class="hit-info">
-        <div class="invest">投資 1,000円</div>
-        <div class="profit">+195,260円</div>
-        <div class="roi">回収率 19,626%</div>
-      </div>
-    </div>
-    <div class="hit-card">
-      <div class="hit-rank">👑💥 SX</div>
-      <div class="hit-info">
-        <div class="invest">投資 2,800円</div>
-        <div class="profit">+151,140円</div>
-        <div class="roi">回収率 5,398%</div>
-      </div>
-    </div>
-    <div class="hit-card">
-      <div class="hit-rank">👑💥 SX</div>
-      <div class="hit-info">
-        <div class="invest">投資 2,800円</div>
-        <div class="profit">+143,000円</div>
-        <div class="roi">回収率 5,214%</div>
-      </div>
-    </div>
-    <div class="hit-card">
-      <div class="hit-rank">🥇🔥 SA</div>
-      <div class="hit-info">
-        <div class="invest">投資 1,200円</div>
-        <div class="profit">+89,390円</div>
-        <div class="roi">回収率 7,449%</div>
-      </div>
-    </div>
-    <div class="hit-card">
-      <div class="hit-rank">🔥 Y</div>
-      <div class="hit-info">
-        <div class="invest">投資 2,500円</div>
-        <div class="profit">+68,220円</div>
-        <div class="roi">回収率 2,829%</div>
-      </div>
-    </div>
-  </div>
+  <div class="hit-grid" id="hit-grid">読み込み中...</div>
 </div>
 
 <!-- グラフ -->
-<div class="sec" style="padding-top:0">
-  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
-    <div class="chart-card">
-      <div class="chart-title">📅 月別 回収率推移</div>
-      <canvas id="monthChart"></canvas>
-    </div>
-    <div class="chart-card">
-      <div class="chart-title">📊 ランク別 回収率</div>
-      <canvas id="rankChart"></canvas>
-    </div>
+<div class="sec" style="padding-top:0" id="detail">
+  <div class="chart-grid-2" style="margin-bottom:18px">
+    <div class="chart-card"><div class="chart-title">📅 月別 回収率推移</div><canvas id="monthChart"></canvas></div>
+    <div class="chart-card"><div class="chart-title">📊 ランク別 回収率（実績順）</div><canvas id="rankChart"></canvas></div>
+  </div>
+  <div class="chart-grid-3">
+    <div class="chart-card"><div class="chart-title">🏟️ 競馬場別 回収率</div><canvas id="placeChart"></canvas></div>
+    <div class="chart-card"><div class="chart-title">🏇 R番号別 回収率</div><canvas id="rnumChart"></canvas></div>
+    <div class="chart-card"><div class="chart-title">📏 距離・芝ダート別</div><canvas id="distChart"></canvas></div>
   </div>
 </div>
 
-<div class="divider"></div>
-
-<!-- ランク別実績テーブル -->
+<!-- ランク別テーブル -->
 <div class="sec" id="ranks">
   <div class="sec-head">
     <div class="tag">🏷️ 11段階ランク</div>
     <h2>AIランク別 詳細実績</h2>
-    <p>AIは毎レースを自動で11段階に分類。ランクごとに最適な買い方を適用します。</p>
+    <p>AIは毎レースを自動で11段階に分類。ランクごとに最適な買い方を自動適用します。</p>
   </div>
   <div style="overflow-x:auto">
-    <table class="rank-table">
-      <thead>
-        <tr>
-          <th>ランク</th>
-          <th>意味</th>
-          <th>実戦数</th>
-          <th>回収率</th>
-          <th>的中率</th>
-          <th>最高利益</th>
-          <th>評価</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="rank-badge rank-s">💣 Z</span></td>
-          <td style="color:var(--sub);font-size:.82rem">小穴波乱</td>
-          <td>9戦</td>
-          <td><strong>368%</strong><span class="bar-wrap"><span class="bar-fill" style="width:100%"></span></span></td>
-          <td>56%</td>
-          <td style="color:var(--g)">+39,860円</td>
-          <td><span class="rank-badge rank-s">最強</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-s">👑 SS</span></td>
-          <td style="color:var(--sub);font-size:.82rem">超鉄板（完全1強）</td>
-          <td>92戦</td>
-          <td><strong>276%</strong><span class="bar-wrap"><span class="bar-fill" style="width:75%"></span></span></td>
-          <td>21%</td>
-          <td style="color:var(--g)">+195,260円</td>
-          <td><span class="rank-badge rank-s">優秀</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-s">🥇🔥 SA</span></td>
-          <td style="color:var(--sub);font-size:.82rem">堅軸・中波乱</td>
-          <td>35戦</td>
-          <td><strong>269%</strong><span class="bar-wrap"><span class="bar-fill" style="width:73%"></span></span></td>
-          <td>40%</td>
-          <td style="color:var(--g)">+89,390円</td>
-          <td><span class="rank-badge rank-s">優秀</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-s">🥈 A</span></td>
-          <td style="color:var(--sub);font-size:.82rem">本命単勝妙味</td>
-          <td>96戦</td>
-          <td><strong>249%</strong><span class="bar-wrap"><span class="bar-fill" style="width:68%"></span></span></td>
-          <td>8%</td>
-          <td style="color:var(--g)">+24,150円</td>
-          <td><span class="rank-badge rank-s">優秀</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-s">👑💥 SX</span></td>
-          <td style="color:var(--sub);font-size:.82rem">1強・ヒモ大荒れ</td>
-          <td>102戦</td>
-          <td><strong>193%</strong><span class="bar-wrap"><span class="bar-fill" style="width:52%"></span></span></td>
-          <td>36%</td>
-          <td style="color:var(--g)">+151,140円</td>
-          <td><span class="rank-badge rank-s">優秀</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-a">🥇 S</span></td>
-          <td style="color:var(--sub);font-size:.82rem">堅軸（順当）</td>
-          <td>24戦</td>
-          <td><strong>157%</strong><span class="bar-wrap"><span class="bar-fill" style="width:43%;background:var(--warn)"></span></span></td>
-          <td>67%</td>
-          <td style="color:var(--g)">+282,280円</td>
-          <td><span class="rank-badge rank-a">良好</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-a">⚔️ MM</span></td>
-          <td style="color:var(--sub);font-size:.82rem">2強マッチレース</td>
-          <td>38戦</td>
-          <td><strong>123%</strong><span class="bar-wrap"><span class="bar-fill" style="width:33%;background:var(--warn)"></span></span></td>
-          <td>39%</td>
-          <td style="color:var(--g)">+15,510円</td>
-          <td><span class="rank-badge rank-a">良好</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-b">🔥 Y</span></td>
-          <td style="color:var(--sub);font-size:.82rem">中穴波乱</td>
-          <td>51戦</td>
-          <td><strong>111%</strong><span class="bar-wrap"><span class="bar-fill" style="width:30%;background:#80cbc4"></span></span></td>
-          <td>33%</td>
-          <td style="color:var(--g)">+68,220円</td>
-          <td><span class="rank-badge rank-b">安定</span></td>
-        </tr>
-        <tr>
-          <td><span class="rank-badge rank-b">💀 D</span></td>
-          <td style="color:var(--sub);font-size:.82rem">過剰人気逆張り</td>
-          <td>106戦</td>
-          <td><strong>106%</strong><span class="bar-wrap"><span class="bar-fill" style="width:28%;background:#80cbc4"></span></span></td>
-          <td>38%</td>
-          <td style="color:var(--g)">+15,390円</td>
-          <td><span class="rank-badge rank-b">安定</span></td>
-        </tr>
-      </tbody>
+    <table class="rank-tbl">
+      <thead><tr>
+        <th>ランク</th><th>説明</th><th>実戦数</th><th>回収率</th>
+        <th>的中率</th><th>最高利益</th><th>評価</th>
+      </tr></thead>
+      <tbody id="rank-tbody">読み込み中...</tbody>
     </table>
   </div>
 </div>
@@ -381,70 +179,26 @@
   <div class="sec-head">
     <div class="tag">🧠 AIの仕組み</div>
     <h2>どうやって稼ぐのか</h2>
-    <p>競馬の「オッズ」は世間の予想によって決まります。AIはその歪みを発見します。</p>
+    <p>競馬の「オッズ」は世間の予想で決まります。AIはその歪みを発見します。</p>
   </div>
   <div class="how-grid">
-    <div class="how-card">
-      <div class="how-icon">🛡️</div>
-      <h3>本命AI（LightGBM）</h3>
-      <p>騎手のコース実績・距離適性・タイム指数・展開予測など40以上の特徴量を学習。軸馬として信頼できる馬を高精度で選びます。</p>
-    </div>
-    <div class="how-card">
-      <div class="how-icon">💥</div>
-      <h3>穴馬AI（LGBM + CatBoost）</h3>
-      <p>人気薄でも好走しやすい馬を特定。世間が見落としているオッズの歪みを突いて高配当を狙います。</p>
-    </div>
-    <div class="how-card">
-      <div class="how-icon">📐</div>
-      <h3>11段階ランク判定</h3>
-      <p>偏差値・単勝EV・波乱EV の3指標から SS〜C の11段階に自動分類。「鉄板ランク」「波乱ランク」で買い方を完全自動切替。</p>
-    </div>
-    <div class="how-card">
-      <div class="how-icon">🔬</div>
-      <h3>期待値（EV）でフィルタリング</h3>
-      <p>EV = AI予測勝率 × 単勝オッズ。EV > 1.0 の馬だけを買い目に含め、長期的にプラスになる馬券だけを自動選別します。</p>
-    </div>
-    <div class="how-card">
-      <div class="how-icon">📊</div>
-      <h3>実戦データで継続最適化</h3>
-      <p>555戦の実際の収支データを毎回フィードバック。「どのランクでどの買い方が最強か」をデータで証明して改善し続けます。</p>
-    </div>
-    <div class="how-card">
-      <div class="how-icon">🚫</div>
-      <h3>感情・直感は一切なし</h3>
-      <p>人気馬でも期待値が低ければ切る。無名馬でも期待値が高ければ軸にする。データだけが唯一の判断基準です。</p>
-    </div>
+    <div class="how-card"><div class="how-icon">🛡️</div><h3>本命AI（LightGBM）</h3><p>騎手のコース実績・距離適性・タイム指数・展開予測など40以上の特徴量を学習。軸馬として信頼できる馬を高精度で選びます。</p></div>
+    <div class="how-card"><div class="how-icon">💥</div><h3>穴馬AI（LGBM + CatBoost）</h3><p>人気薄でも好走しやすい馬を特定。世間が見落としているオッズの歪みを突いて高配当を狙います。</p></div>
+    <div class="how-card"><div class="how-icon">📐</div><h3>11段階ランク判定</h3><p>偏差値・単勝EV・波乱EV の3指標から SS〜C の11段階に自動分類。ランクごとに最適な買い方を完全自動切替。</p></div>
+    <div class="how-card"><div class="how-icon">🔬</div><h3>期待値（EV）フィルタ</h3><p>EV = AI予測勝率 × 単勝オッズ。EV > 1.0 の馬だけを買い目に含め、長期的にプラスになる馬券だけを自動選別。</p></div>
+    <div class="how-card"><div class="how-icon">📊</div><h3>実戦データで継続改善</h3><p>実際の収支データを毎回フィードバック。どのランクでどの買い方が最強かをデータで証明し続けます。</p></div>
+    <div class="how-card"><div class="how-icon">🚫</div><h3>感情・直感は一切なし</h3><p>人気馬でも期待値が低ければ切る。無名馬でも期待値が高ければ軸にする。データだけが唯一の判断基準です。</p></div>
   </div>
 </div>
 
 <!-- 購入フロー -->
 <div class="sec" style="padding-top:0">
-  <div class="sec-head">
-    <div class="tag">📋 予想の使い方</div>
-    <h2>購入から馬券購入まで</h2>
-    <p>BOOKERSで予想を購入→JRAネットで馬券を買うだけです。</p>
-  </div>
+  <div class="sec-head"><div class="tag">📋 使い方</div><h2>購入から馬券まで4ステップ</h2></div>
   <div class="flow">
-    <div class="flow-step">
-      <div class="flow-num">1</div>
-      <h3>予想をフォロー</h3>
-      <p>X @EV_AI_Keiba で<br>予告投稿をチェック</p>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">2</div>
-      <h3>BOOKERSで購入</h3>
-      <p>100円で買い目を<br>完全公開</p>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">3</div>
-      <h3>馬券を購入</h3>
-      <p>JRAネット/IPAT で<br>買い目通りに購入</p>
-    </div>
-    <div class="flow-step">
-      <div class="flow-num">4</div>
-      <h3>結果報告</h3>
-      <p>Xで的中・収支を<br>リアルタイム報告</p>
-    </div>
+    <div class="flow-step"><div class="flow-num">1</div><h3>X をフォロー</h3><p>@EV_AI_Keiba で<br>予告投稿をチェック</p></div>
+    <div class="flow-step"><div class="flow-num">2</div><h3>BOOKERS で購入</h3><p>100円で買い目を<br>完全公開</p></div>
+    <div class="flow-step"><div class="flow-num">3</div><h3>馬券を購入</h3><p>JRAネット/IPAT で<br>買い目通りに購入</p></div>
+    <div class="flow-step"><div class="flow-num">4</div><h3>結果報告</h3><p>X で的中・収支を<br>リアルタイム報告</p></div>
   </div>
 </div>
 
@@ -452,58 +206,35 @@
 
 <!-- FAQ -->
 <div class="sec" id="faq">
-  <div class="sec-head">
-    <div class="tag">❓ よくある質問</div>
-    <h2>FAQ</h2>
-  </div>
+  <div class="sec-head"><div class="tag">❓ FAQ</div><h2>よくある質問</h2></div>
   <div class="faq-list">
-    <div class="faq-item">
-      <div class="faq-q">回収率178%って本当ですか？</div>
-      <div class="faq-a">はい、2026年の実際の馬券購入の結果です。バックテストではなく、リアルマネーで馬券を購入した実績です。購入履歴・収支はXで随時公開しています。ただし過去の実績が将来を保証するものではありません。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">毎週何レース予想が出ますか？</div>
-      <div class="faq-a">週末（土日）のJRA開催全レースを対象にAIが自動分析します。平均20〜25レース分の予想がBOOKERSに掲載されます。ランクがC（見送り）のレースは掲載されません。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">1レースいくら必要ですか？</div>
-      <div class="faq-a">ランクによって異なりますが、爆撃（一撃狙い）は100〜3,000円程度、防衛（的中重視）は1,000〜13,000円程度です。予想には「推奨投資額」も記載しているので、資金に合わせて調整できます。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">毎週当たりますか？</div>
-      <div class="faq-a">毎週当たるわけではありません。的中率はランクによって8〜67%です。短期的には負けることもありますが、長期（数十戦以上）で見ると回収率が100%を超えるよう設計されています。100〜200戦単位で見ることを推奨します。</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">なぜ予想を売るのですか？</div>
-      <div class="faq-a">AIシステムの開発・運用コストの一部を賄うためです。また、予想を公開することで実績の透明性が担保され、AIの継続的な改善につながります。</div>
-    </div>
+    <div class="faq-item"><div class="faq-q">回収率178%って本当ですか？</div><div class="faq-a">はい、2026年のリアルマネーで購入した馬券の実績です。バックテストではありません。収支はXで随時公開しています。ただし過去の実績が将来を保証するものではありません。</div></div>
+    <div class="faq-item"><div class="faq-q">毎週何レース予想が出ますか？</div><div class="faq-a">週末（土日）のJRA開催全レースを対象にAIが自動分析します。平均20〜25レース分の予想がBOOKERSに掲載されます。ランクがC（見送り）のレースは掲載されません。</div></div>
+    <div class="faq-item"><div class="faq-q">1レースいくら必要ですか？</div><div class="faq-a">ランクによって異なりますが、爆撃（一撃狙い）は100〜3,000円程度、防衛（的中重視）は1,000〜13,000円程度です。資金に合わせて調整可能です。</div></div>
+    <div class="faq-item"><div class="faq-q">毎週当たりますか？</div><div class="faq-a">毎週当たるわけではありません。的中率はランクによって8〜67%です。短期的には負けることもありますが、長期（100戦以上）で見ると回収率が100%を超えるよう設計されています。</div></div>
+    <div class="faq-item"><div class="faq-q">データはいつ更新されますか？</div><div class="faq-a">AIシステムが分析を完了するたびに自動でサイトのデータが更新されます。通常は週末のレース後（月曜〜火曜）に最新の実績が反映されます。</div></div>
   </div>
 </div>
 
 <div class="divider"></div>
 
-<!-- CTA -->
 <div class="cta-sec">
   <div class="cta-box">
     <h2>今週の予想、公開中🏇</h2>
-    <p>AIが厳選した勝負レースの<br>「ランク・馬名・買い目・点数・金額」を完全公開。<br>たった100円から購入できます。</p>
-    <a href="https://bookers.tech/author/550868/" target="_blank" class="btn-g" style="font-size:1.05rem">
+    <p>AIが厳選した勝負レースの「ランク・馬名・買い目・点数・金額」を完全公開。<br>たった100円から購入できます。</p>
+    <a href="https://bookers.tech/author/550868/" target="_blank" class="btn-g" style="font-size:1rem">
       BOOKERSで予想を見る →
     </a>
-    <div class="cta-sub">
-      Xでも毎週末に予告・結果報告を配信中 →
-      <a href="https://twitter.com/EV_AI_Keiba" target="_blank">@EV_AI_Keiba</a>
-    </div>
+    <div class="cta-sub">Xでも毎週末に予告・結果報告を配信中 → <a href="https://twitter.com/EV_AI_Keiba" target="_blank">@EV_AI_Keiba</a></div>
   </div>
 </div>
 
-<!-- FOOTER -->
+<div class="updated" id="updated-at"></div>
+
 <footer>
   <div class="f-links">
-    <a href="#results">実績</a>
-    <a href="#ranks">ランク</a>
-    <a href="#how">仕組み</a>
-    <a href="#faq">FAQ</a>
+    <a href="#results">実績</a><a href="#detail">詳細分析</a><a href="#ranks">ランク</a>
+    <a href="#how">仕組み</a><a href="#faq">FAQ</a>
     <a href="https://bookers.tech/author/550868/" target="_blank">BOOKERS</a>
     <a href="https://twitter.com/EV_AI_Keiba" target="_blank">X @EV_AI_Keiba</a>
   </div>
@@ -511,67 +242,115 @@
 </footer>
 
 <script>
-// 月別グラフ
-new Chart(document.getElementById('monthChart'),{
-  type:'bar',
-  data:{
-    labels:['2026-02','2026-03','2026-04','2026-05'],
-    datasets:[{
-      label:'回収率(%)',
-      data:[0,91,204,185],
-      backgroundColor:['rgba(136,136,170,.4)','rgba(136,136,170,.4)','rgba(0,200,83,.65)','rgba(0,200,83,.55)'],
-      borderColor:['#8888aa','#8888aa','#00c853','#00c853'],
-      borderWidth:2,borderRadius:8
-    }]
-  },
-  options:{
-    responsive:true,
-    plugins:{legend:{display:false},
-      annotation:{},
-      tooltip:{callbacks:{label:c=>` ${c.raw}%`}}},
-    scales:{
-      x:{grid:{color:'#22223a'},ticks:{color:'#8888aa'}},
-      y:{grid:{color:'#22223a'},ticks:{color:'#8888aa',callback:v=>v+'%'},min:0,suggestedMax:250}
-    }
-  }
-});
+const BOOKERS = 'https://bookers.tech/author/550868/';
+const fmt = n => n >= 0 ? `+${(n/10000).toFixed(1)}万` : `${(n/10000).toFixed(1)}万`;
 
-// ランク別グラフ
-new Chart(document.getElementById('rankChart'),{
-  type:'bar',
-  data:{
-    labels:['Z','SS','SA','A','SX','S','MM','Y','D'],
-    datasets:[{
-      label:'回収率(%)',
-      data:[368,276,269,249,193,157,123,111,106],
-      backgroundColor:[
-        'rgba(0,200,83,.8)','rgba(0,200,83,.7)','rgba(0,200,83,.65)',
-        'rgba(0,200,83,.6)','rgba(0,200,83,.55)',
-        'rgba(255,215,64,.6)','rgba(255,215,64,.5)',
-        'rgba(128,203,196,.5)','rgba(128,203,196,.45)'
-      ],
-      borderWidth:0,borderRadius:6
-    }]
-  },
-  options:{
-    indexAxis:'y',
-    responsive:true,
-    plugins:{legend:{display:false},
-      tooltip:{callbacks:{label:c=>` ${c.raw}%`}}},
-    scales:{
-      x:{grid:{color:'#22223a'},ticks:{color:'#8888aa',callback:v=>v+'%'}},
-      y:{grid:{display:false},ticks:{color:'#e8e8f4',font:{weight:'bold'}}}
-    }
-  }
-});
+fetch('./data.json?t=' + Date.now())
+  .then(r => r.json())
+  .then(d => {
+    const t = d.total;
+    // Hero KPI
+    document.getElementById('h-races').textContent = t.races;
+    document.getElementById('h-proof').textContent = `✅ 実戦${t.races}戦で回収率${t.roi}%・利益${fmt(t.profit)}を達成`;
+    document.getElementById('k-roi').textContent = t.roi + '%';
+    document.getElementById('k-races').textContent = t.races + '戦';
+    document.getElementById('k-profit').textContent = fmt(t.profit);
+    const lastM = d.monthly[d.monthly.length - 1];
+    document.getElementById('k-last-roi').textContent = lastM ? lastM.roi + '%' : '---%';
+    document.getElementById('updated-at').textContent = `最終更新: ${d.updated}`;
 
-// FAQ アコーディオン
-document.querySelectorAll('.faq-q').forEach(q=>{
-  q.addEventListener('click',()=>{
-    const item=q.parentElement;
-    item.classList.toggle('open');
+    // 高額的中
+    const hg = document.getElementById('hit-grid');
+    hg.innerHTML = d.top_hits.map(h => `
+      <div class="hit-card">
+        <div class="hit-rank">${h.emoji} ${h.rank}</div>
+        <div class="hit-info">
+          <div class="inv">投資 ${h.invest.toLocaleString()}円 ／ ${h.date}</div>
+          <div class="prof">+${h.profit.toLocaleString()}円</div>
+          <div class="roi-txt">回収率 ${h.roi.toLocaleString()}%</div>
+        </div>
+      </div>`).join('');
+
+    // ランク別テーブル
+    const tbody = document.getElementById('rank-tbody');
+    const sorted = [...d.ranks].sort((a,b) => b.roi - a.roi);
+    tbody.innerHTML = sorted.map(r => {
+      const pct = Math.min(r.roi / 4, 100);
+      const cls = r.roi >= 200 ? 'rs' : r.roi >= 120 ? 'ra' : 'rb';
+      const eval_ = r.roi >= 200 ? '<span class="rbadge rs">最強</span>' : r.roi >= 150 ? '<span class="rbadge rs">優秀</span>' : r.roi >= 120 ? '<span class="rbadge ra">良好</span>' : '<span class="rbadge rb">安定</span>';
+      return `<tr>
+        <td><span class="rbadge ${cls}">${r.emoji} ${r.rank}</span></td>
+        <td style="color:var(--sub);font-size:.8rem;max-width:220px">${r.desc}</td>
+        <td>${r.races}戦</td>
+        <td><strong>${r.roi}%</strong><span class="bar-bg"><span class="bar-fill" style="width:${pct}%;background:${r.roi>=200?'var(--g)':r.roi>=120?'var(--warn)':'#80cbc4'}"></span></span></td>
+        <td>${r.hit_rate}%</td>
+        <td style="color:var(--g)">+${r.best.toLocaleString()}円</td>
+        <td>${eval_}</td>
+      </tr>`;
+    }).join('');
+
+    // チャート共通オプション
+    const co = (yLabel='%') => ({
+      responsive: true,
+      plugins: { legend: { display: false }, tooltip: { callbacks: { label: c => ` ${c.raw}${yLabel}` } } },
+      scales: {
+        x: { grid: { color: '#22223a' }, ticks: { color: '#8888aa' } },
+        y: { grid: { color: '#22223a' }, ticks: { color: '#8888aa', callback: v => v + yLabel } }
+      }
+    });
+
+    // 月別
+    const ms = d.monthly;
+    new Chart('monthChart', { type: 'bar', data: {
+      labels: ms.map(m => m.month),
+      datasets: [{ data: ms.map(m => m.roi), backgroundColor: ms.map(m => m.roi >= 100 ? 'rgba(0,200,83,.65)' : 'rgba(255,82,82,.5)'),
+                   borderColor: ms.map(m => m.roi >= 100 ? '#00c853' : '#ff5252'), borderWidth: 2, borderRadius: 7 }]
+    }, options: co() });
+
+    // ランク別（横棒）
+    const rs2 = [...d.ranks].sort((a,b) => b.roi - a.roi);
+    new Chart('rankChart', { type: 'bar', data: {
+      labels: rs2.map(r => r.emoji + ' ' + r.rank),
+      datasets: [{ data: rs2.map(r => r.roi), indexAxis: 'y',
+                   backgroundColor: rs2.map(r => r.roi>=200?'rgba(0,200,83,.7)':r.roi>=120?'rgba(255,215,64,.6)':'rgba(128,203,196,.5)'),
+                   borderWidth: 0, borderRadius: 5 }]
+    }, options: { ...co(), indexAxis: 'y', scales: {
+      x: { grid: { color: '#22223a' }, ticks: { color: '#8888aa', callback: v => v+'%' } },
+      y: { grid: { display: false }, ticks: { color: '#e8e8f4', font: { weight: 'bold' } } }
+    }}});
+
+    // 競馬場別
+    new Chart('placeChart', { type: 'bar', data: {
+      labels: d.places.map(p => p.place),
+      datasets: [{ data: d.places.map(p => p.roi), backgroundColor: d.places.map(p => p.roi>=100?'rgba(0,200,83,.6)':'rgba(255,82,82,.5)'),
+                   borderWidth: 0, borderRadius: 6 }]
+    }, options: co() });
+
+    // R番号別
+    new Chart('rnumChart', { type: 'bar', data: {
+      labels: d.by_rnum.map(r => r.rnum + 'R'),
+      datasets: [{ data: d.by_rnum.map(r => r.roi), backgroundColor: d.by_rnum.map(r => r.roi>=100?'rgba(0,200,83,.6)':'rgba(255,82,82,.5)'),
+                   borderWidth: 0, borderRadius: 5 }]
+    }, options: co() });
+
+    // 距離・芝ダート
+    const distData = [...d.by_dist, ...d.by_track];
+    new Chart('distChart', { type: 'bar', data: {
+      labels: distData.map(x => x.label || x.track),
+      datasets: [{ data: distData.map(x => x.roi), backgroundColor: distData.map(x => x.roi>=100?'rgba(124,111,255,.6)':'rgba(255,82,82,.5)'),
+                   borderWidth: 0, borderRadius: 5 }]
+    }, options: co() });
+  })
+  .catch(() => {
+    document.getElementById('h-proof').textContent = '✅ 実戦555戦で回収率178%・利益+79.6万円を達成';
+    document.getElementById('k-roi').textContent = '178%';
+    document.getElementById('k-races').textContent = '555戦';
+    document.getElementById('k-profit').textContent = '+79.6万';
+    document.getElementById('k-last-roi').textContent = '185%';
   });
-});
+
+// FAQ
+document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => q.parentElement.classList.toggle('open')));
 </script>
 </body>
 </html>
