@@ -1,11 +1,11 @@
 {
-  "updated": "2026-06-07 17:41",
+  "updated": "2026-06-07 17:59",
   "total": {
-    "races": 568,
-    "roi": 172.4,
-    "profit": 764090,
-    "hits": 175,
-    "hit_rate": 30.8,
+    "races": 580,
+    "roi": 168.8,
+    "profit": 746440,
+    "hits": 182,
+    "hit_rate": 31.4,
     "best": 282280
   },
   "monthly": [
@@ -47,12 +47,12 @@
     },
     {
       "month": "2026-06",
-      "races": 12,
-      "roi": 12.3,
-      "profit": -30510,
-      "hits": 3,
-      "hit_rate": 25.0,
-      "best": 160
+      "races": 24,
+      "roi": 26.7,
+      "profit": -48160,
+      "hits": 10,
+      "hit_rate": 41.7,
+      "best": 2800
     }
   ],
   "weekly": [
@@ -157,21 +157,21 @@
     },
     {
       "week": "2026-06-01/2026-06-07",
-      "races": 12,
-      "roi": 12.3,
-      "profit": -30510,
-      "hits": 3,
-      "hit_rate": 25.0,
-      "best": 160
+      "races": 24,
+      "roi": 26.7,
+      "profit": -48160,
+      "hits": 10,
+      "hit_rate": 41.7,
+      "best": 2800
     }
   ],
   "ranks": [
     {
-      "races": 93,
-      "roi": 273.4,
-      "profit": 161220,
-      "hits": 19,
-      "hit_rate": 20.4,
+      "races": 97,
+      "roi": 266.0,
+      "profit": 161020,
+      "hits": 20,
+      "hit_rate": 20.6,
       "best": 195260,
       "rank": "SS",
       "emoji": "👑",
@@ -189,22 +189,22 @@
       "desc": "1強だがヒモが荒れやすい。本命を軸にヒモを広く流す。"
     },
     {
-      "races": 36,
-      "roi": 261.5,
-      "profit": 66070,
+      "races": 37,
+      "roi": 257.8,
+      "profit": 65470,
       "hits": 14,
-      "hit_rate": 38.9,
+      "hit_rate": 37.8,
       "best": 89390,
       "rank": "SA",
       "emoji": "🥇🔥",
       "desc": "堅軸+中穴波乱。サンドイッチ三連複が特効薬。"
     },
     {
-      "races": 39,
-      "roi": 120.1,
-      "profit": 8650,
-      "hits": 15,
-      "hit_rate": 38.5,
+      "races": 40,
+      "roi": 119.1,
+      "profit": 8430,
+      "hits": 16,
+      "hit_rate": 40.0,
       "best": 15510,
       "rank": "MM",
       "emoji": "⚔️",
@@ -222,33 +222,33 @@
       "desc": "上位が明確。三連系の的中率67%と高い。"
     },
     {
-      "races": 98,
-      "roi": 122.6,
-      "profit": 9000,
-      "hits": 9,
-      "hit_rate": 9.2,
+      "races": 100,
+      "roi": 83.0,
+      "profit": -10240,
+      "hits": 10,
+      "hit_rate": 10.0,
       "best": 24150,
       "rank": "A",
       "emoji": "🥈",
       "desc": "オッズに歪みがある馬がいる。EV1位へのワイド・単勝が強い。"
     },
     {
-      "races": 110,
-      "roi": 103.5,
-      "profit": 2660,
-      "hits": 41,
-      "hit_rate": 37.3,
+      "races": 113,
+      "roi": 107.9,
+      "profit": 6250,
+      "hits": 44,
+      "hit_rate": 38.9,
       "best": 15390,
       "rank": "D",
       "emoji": "💀",
       "desc": "1番人気が過剰人気。逆張りで穴馬AIを使う。"
     },
     {
-      "races": 52,
-      "roi": 111.1,
-      "profit": 14470,
-      "hits": 18,
-      "hit_rate": 34.6,
+      "races": 53,
+      "roi": 110.2,
+      "profit": 13490,
+      "hits": 19,
+      "hit_rate": 35.8,
       "best": 68220,
       "rank": "Y",
       "emoji": "🔥",
@@ -378,11 +378,11 @@
       "place": "福島"
     },
     {
-      "races": 85,
-      "roi": 198.1,
-      "profit": 192350,
-      "hits": 26,
-      "hit_rate": 30.6,
+      "races": 97,
+      "roi": 177.0,
+      "profit": 174700,
+      "hits": 33,
+      "hit_rate": 34.0,
       "best": 143000,
       "place": "阪神"
     },
@@ -425,168 +425,168 @@
   ],
   "by_rnum": [
     {
-      "races": 44,
-      "roi": 47.3,
-      "profit": -31450,
+      "races": 45,
+      "roi": 46.5,
+      "profit": -32450,
       "hits": 10,
-      "hit_rate": 22.7,
+      "hit_rate": 22.2,
       "best": 5450,
       "rnum": 1
     },
     {
-      "races": 43,
-      "roi": 344.3,
-      "profit": 252410,
+      "races": 44,
+      "roi": 341.0,
+      "profit": 251410,
       "hits": 15,
-      "hit_rate": 34.9,
+      "hit_rate": 34.1,
       "best": 282280,
       "rnum": 2
     },
     {
-      "races": 43,
-      "roi": 37.0,
-      "profit": -39280,
-      "hits": 14,
-      "hit_rate": 32.6,
+      "races": 44,
+      "roi": 33.6,
+      "profit": -48220,
+      "hits": 15,
+      "hit_rate": 34.1,
       "best": 2700,
       "rnum": 3
     },
     {
-      "races": 44,
-      "roi": 40.8,
-      "profit": -53710,
-      "hits": 14,
-      "hit_rate": 31.8,
+      "races": 45,
+      "roi": 41.9,
+      "profit": -53140,
+      "hits": 15,
+      "hit_rate": 33.3,
       "best": 4630,
       "rnum": 4
     },
     {
-      "races": 46,
-      "roi": 359.5,
-      "profit": 213810,
+      "races": 47,
+      "roi": 355.2,
+      "profit": 212810,
       "hits": 17,
-      "hit_rate": 37.0,
+      "hit_rate": 36.2,
       "best": 195260,
       "rnum": 5
     },
     {
-      "races": 46,
-      "roi": 303.6,
-      "profit": 168950,
-      "hits": 18,
-      "hit_rate": 39.1,
+      "races": 47,
+      "roi": 304.5,
+      "profit": 171750,
+      "hits": 19,
+      "hit_rate": 40.4,
       "best": 151140,
       "rnum": 6
     },
     {
-      "races": 46,
-      "roi": 162.6,
-      "profit": 55870,
-      "hits": 21,
-      "hit_rate": 45.7,
+      "races": 47,
+      "roi": 162.7,
+      "profit": 56450,
+      "hits": 22,
+      "hit_rate": 46.8,
       "best": 42610,
       "rnum": 7
     },
     {
-      "races": 47,
-      "roi": 93.7,
-      "profit": -5320,
-      "hits": 13,
-      "hit_rate": 27.7,
+      "races": 48,
+      "roi": 93.5,
+      "profit": -5540,
+      "hits": 14,
+      "hit_rate": 29.2,
       "best": 24150,
       "rnum": 8
     },
     {
-      "races": 48,
-      "roi": 233.0,
-      "profit": 173420,
+      "races": 49,
+      "roi": 215.9,
+      "profit": 163120,
       "hits": 21,
-      "hit_rate": 43.8,
+      "hit_rate": 42.9,
       "best": 143000,
       "rnum": 9
     },
     {
-      "races": 49,
-      "roi": 84.9,
-      "profit": -13510,
-      "hits": 12,
-      "hit_rate": 24.5,
+      "races": 50,
+      "roi": 87.7,
+      "profit": -11070,
+      "hits": 13,
+      "hit_rate": 26.0,
       "best": 15510,
       "rnum": 10
     },
     {
-      "races": 62,
-      "roi": 200.6,
-      "profit": 98720,
+      "races": 63,
+      "roi": 199.4,
+      "profit": 98120,
       "hits": 11,
-      "hit_rate": 17.7,
+      "hit_rate": 17.5,
       "best": 89390,
       "rnum": 11
     },
     {
-      "races": 50,
-      "roi": 31.8,
-      "profit": -55820,
-      "hits": 9,
-      "hit_rate": 18.0,
+      "races": 51,
+      "roi": 32.7,
+      "profit": -56800,
+      "hits": 10,
+      "hit_rate": 19.6,
       "best": 2280,
       "rnum": 12
     }
   ],
   "by_track": [
     {
-      "races": 290,
-      "roi": 171.3,
-      "profit": 399280,
-      "hits": 99,
-      "hit_rate": 34.1,
+      "races": 296,
+      "roi": 171.0,
+      "profit": 401300,
+      "hits": 102,
+      "hit_rate": 34.5,
       "best": 195260,
       "track": "芝"
     },
     {
-      "races": 277,
-      "roi": 174.5,
-      "profit": 366530,
-      "hits": 75,
-      "hit_rate": 27.1,
+      "races": 283,
+      "roi": 167.0,
+      "profit": 346860,
+      "hits": 79,
+      "hit_rate": 27.9,
       "best": 282280,
       "track": "ダート"
     }
   ],
   "by_dist": [
     {
-      "races": 104,
-      "roi": 62.4,
-      "profit": -63980,
+      "races": 105,
+      "roi": 62.2,
+      "profit": -64580,
       "hits": 25,
-      "hit_rate": 24.0,
+      "hit_rate": 23.8,
       "best": 24150,
       "label": "〜1200m短距離"
     },
     {
-      "races": 165,
-      "roi": 106.9,
-      "profit": 20910,
-      "hits": 47,
-      "hit_rate": 28.5,
+      "races": 169,
+      "roi": 103.1,
+      "profit": 9960,
+      "hits": 49,
+      "hit_rate": 29.0,
       "best": 42610,
       "label": "〜1600mマイル"
     },
     {
-      "races": 224,
-      "roi": 301.4,
-      "profit": 856350,
-      "hits": 80,
-      "hit_rate": 35.7,
+      "races": 230,
+      "roi": 292.9,
+      "profit": 851250,
+      "hits": 85,
+      "hit_rate": 37.0,
       "best": 282280,
       "label": "〜2000m中距離"
     },
     {
-      "races": 75,
-      "roi": 68.5,
-      "profit": -49190,
+      "races": 76,
+      "roi": 68.1,
+      "profit": -50190,
       "hits": 23,
-      "hit_rate": 30.7,
+      "hit_rate": 30.3,
       "best": 26320,
       "label": "2001m〜長距離"
     }
@@ -594,127 +594,127 @@
   "rolling": [
     {
       "i": 29,
-      "roi": 101.5
+      "roi": 152.5
     },
     {
       "i": 30,
-      "roi": 107.1
+      "roi": 152.5
     },
     {
       "i": 31,
-      "roi": 101.3
+      "roi": 144.6
     },
     {
       "i": 32,
-      "roi": 107.6
+      "roi": 146.8
     },
     {
       "i": 33,
-      "roi": 112.1
+      "roi": 142.9
     },
     {
       "i": 34,
-      "roi": 113.1
+      "roi": 140.9
     },
     {
       "i": 35,
-      "roi": 150.0
+      "roi": 136.1
     },
     {
       "i": 36,
-      "roi": 148.0
+      "roi": 134.0
     },
     {
       "i": 37,
-      "roi": 144.1
+      "roi": 108.4
     },
     {
       "i": 38,
-      "roi": 145.8
+      "roi": 116.2
     },
     {
       "i": 39,
-      "roi": 96.0
+      "roi": 114.2
     },
     {
       "i": 40,
-      "roi": 93.8
+      "roi": 119.7
     },
     {
       "i": 41,
-      "roi": 91.5
+      "roi": 123.5
     },
     {
       "i": 42,
-      "roi": 89.5
+      "roi": 124.3
     },
     {
       "i": 43,
-      "roi": 88.2
+      "roi": 101.8
     },
     {
       "i": 44,
-      "roi": 88.6
+      "roi": 102.4
     },
     {
       "i": 45,
-      "roi": 141.2
+      "roi": 107.4
     },
     {
       "i": 46,
-      "roi": 139.4
+      "roi": 106.6
     },
     {
       "i": 47,
-      "roi": 135.7
+      "roi": 91.6
     },
     {
       "i": 48,
-      "roi": 137.1
+      "roi": 68.2
     },
     {
       "i": 49,
-      "roi": 135.5
+      "roi": 69.0
     },
     {
       "i": 50,
-      "roi": 140.3
+      "roi": 63.2
     },
     {
       "i": 51,
-      "roi": 135.7
+      "roi": 65.5
     },
     {
       "i": 52,
-      "roi": 109.7
+      "roi": 65.2
     },
     {
       "i": 53,
-      "roi": 105.2
+      "roi": 60.6
     },
     {
       "i": 54,
-      "roi": 99.8
+      "roi": 59.9
     },
     {
       "i": 55,
-      "roi": 98.9
+      "roi": 52.3
     },
     {
       "i": 56,
-      "roi": 58.8
+      "roi": 26.0
     },
     {
       "i": 57,
-      "roi": 57.8
+      "roi": 25.8
     },
     {
       "i": 58,
-      "roi": 57.8
+      "roi": 23.6
     },
     {
       "i": 59,
-      "roi": 53.2
+      "roi": 25.3
     }
   ]
 }
