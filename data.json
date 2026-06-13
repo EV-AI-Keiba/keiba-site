@@ -1,12 +1,12 @@
 {
-  "updated": "2026-06-13 02:00",
+  "updated": "2026-06-13 17:31",
   "total": {
-    "races": 580,
-    "roi": 170.4,
-    "profit": 810270,
-    "hits": 197,
-    "hit_rate": 34.0,
-    "best": 282280
+    "races": 202,
+    "roi": 146.4,
+    "profit": 194310,
+    "hits": 68,
+    "hit_rate": 33.7,
+    "best": 151140
   },
   "monthly": [
     {
@@ -29,33 +29,51 @@
     },
     {
       "month": "2026-04",
-      "races": 233,
-      "roi": 206.0,
-      "profit": 531290,
-      "hits": 81,
-      "hit_rate": 34.8,
-      "best": 195260
-    },
-    {
-      "month": "2026-05",
-      "races": 240,
-      "roi": 169.6,
-      "profit": 308640,
-      "hits": 78,
-      "hit_rate": 32.5,
-      "best": 282280
+      "races": 110,
+      "roi": 198.2,
+      "profit": 222100,
+      "hits": 36,
+      "hit_rate": 32.7,
+      "best": 151140
     },
     {
       "month": "2026-06",
-      "races": 24,
-      "roi": 55.0,
-      "profit": -13220,
-      "hits": 9,
-      "hit_rate": 37.5,
-      "best": 2800
+      "races": 9,
+      "roi": 30.4,
+      "profit": -11350,
+      "hits": 3,
+      "hit_rate": 33.3,
+      "best": 740
     }
   ],
   "weekly": [
+    {
+      "week": "2026-02-23/2026-03-01",
+      "races": 3,
+      "roi": 29.8,
+      "profit": -3510,
+      "hits": 1,
+      "hit_rate": 33.3,
+      "best": -10
+    },
+    {
+      "week": "2026-03-02/2026-03-08",
+      "races": 3,
+      "roi": 12.1,
+      "profit": -3430,
+      "hits": 1,
+      "hit_rate": 33.3,
+      "best": -1030
+    },
+    {
+      "week": "2026-03-09/2026-03-15",
+      "races": 3,
+      "roi": 0.0,
+      "profit": -6300,
+      "hits": 0,
+      "hit_rate": 0.0,
+      "best": -700
+    },
     {
       "week": "2026-03-16/2026-03-22",
       "races": 39,
@@ -94,208 +112,125 @@
     },
     {
       "week": "2026-04-13/2026-04-19",
-      "races": 61,
-      "roi": 167.1,
-      "profit": 104240,
-      "hits": 22,
-      "hit_rate": 36.1,
-      "best": 89390
+      "races": 10,
+      "roi": 15.7,
+      "profit": -30430,
+      "hits": 4,
+      "hit_rate": 40.0,
+      "best": 830
     },
     {
-      "week": "2026-04-20/2026-04-26",
-      "races": 72,
-      "roi": 211.9,
-      "profit": 174520,
-      "hits": 27,
-      "hit_rate": 37.5,
-      "best": 195260
-    },
-    {
-      "week": "2026-04-27/2026-05-03",
-      "races": 72,
-      "roi": 364.3,
-      "profit": 387730,
-      "hits": 25,
-      "hit_rate": 34.7,
-      "best": 282280
-    },
-    {
-      "week": "2026-05-04/2026-05-10",
-      "races": 11,
-      "roi": 63.7,
-      "profit": -9300,
+      "week": "2026-06-08/2026-06-14",
+      "races": 9,
+      "roi": 30.4,
+      "profit": -11350,
       "hits": 3,
-      "hit_rate": 27.3,
-      "best": 3360
-    },
-    {
-      "week": "2026-05-11/2026-05-17",
-      "races": 36,
-      "roi": 75.4,
-      "profit": -17640,
-      "hits": 10,
-      "hit_rate": 27.8,
-      "best": 15510
-    },
-    {
-      "week": "2026-05-18/2026-05-24",
-      "races": 73,
-      "roi": 48.5,
-      "profit": -57840,
-      "hits": 19,
-      "hit_rate": 26.0,
-      "best": 17330
-    },
-    {
-      "week": "2026-05-25/2026-05-31",
-      "races": 48,
-      "roi": 106.5,
-      "profit": 5690,
-      "hits": 21,
-      "hit_rate": 43.8,
-      "best": 17630
-    },
-    {
-      "week": "2026-06-01/2026-06-07",
-      "races": 24,
-      "roi": 55.0,
-      "profit": -13220,
-      "hits": 9,
-      "hit_rate": 37.5,
-      "best": 2800
+      "hit_rate": 33.3,
+      "best": 740
     }
   ],
   "ranks": [
     {
-      "races": 97,
-      "roi": 266.0,
-      "profit": 161020,
-      "hits": 20,
-      "hit_rate": 20.6,
-      "best": 195260,
+      "races": 37,
+      "roi": 52.0,
+      "profit": -17750,
+      "hits": 8,
+      "hit_rate": 21.6,
+      "best": 4430,
       "rank": "SS",
       "emoji": "👑",
       "desc": "完全1強。AIが圧倒的な1頭を特定。三連複BOXで効率的に取る。"
     },
     {
-      "races": 105,
-      "roi": 187.8,
-      "profit": 258840,
-      "hits": 38,
-      "hit_rate": 36.2,
+      "races": 35,
+      "roi": 372.6,
+      "profit": 269650,
+      "hits": 14,
+      "hit_rate": 40.0,
       "best": 151140,
       "rank": "SX",
       "emoji": "👑💥",
       "desc": "1強だがヒモが荒れやすい。本命を軸にヒモを広く流す。"
     },
     {
-      "races": 37,
-      "roi": 257.8,
-      "profit": 65470,
-      "hits": 14,
-      "hit_rate": 37.8,
-      "best": 89390,
+      "races": 11,
+      "roi": 30.4,
+      "profit": -9750,
+      "hits": 4,
+      "hit_rate": 36.4,
+      "best": 510,
       "rank": "SA",
       "emoji": "🥇🔥",
       "desc": "堅軸+中穴波乱。サンドイッチ三連複が特効薬。"
     },
     {
-      "races": 40,
-      "roi": 119.1,
-      "profit": 8430,
-      "hits": 16,
-      "hit_rate": 40.0,
-      "best": 15510,
+      "races": 9,
+      "roi": 144.8,
+      "profit": 4480,
+      "hits": 3,
+      "hit_rate": 33.3,
+      "best": 6180,
       "rank": "MM",
       "emoji": "⚔️",
       "desc": "2頭が拮抗。どちらが1着かが鍵。馬連が得意なランク。"
     },
     {
-      "races": 24,
-      "roi": 157.0,
-      "profit": 177940,
-      "hits": 16,
-      "hit_rate": 66.7,
-      "best": 282280,
+      "races": 10,
+      "roi": 39.7,
+      "profit": -78420,
+      "hits": 6,
+      "hit_rate": 60.0,
+      "best": 11040,
       "rank": "S",
       "emoji": "🥇",
       "desc": "上位が明確。三連系の的中率67%と高い。"
     },
     {
-      "races": 100,
-      "roi": 134.9,
-      "profit": 42260,
-      "hits": 23,
-      "hit_rate": 23.0,
+      "races": 34,
+      "roi": 197.9,
+      "profit": 41910,
+      "hits": 11,
+      "hit_rate": 32.4,
       "best": 54130,
       "rank": "A",
       "emoji": "🥈",
       "desc": "オッズに歪みがある馬がいる。EV1位へのワイド・単勝が強い。"
     },
     {
-      "races": 113,
-      "roi": 107.9,
-      "profit": 6250,
-      "hits": 44,
-      "hit_rate": 38.9,
+      "races": 44,
+      "roi": 113.7,
+      "profit": 4230,
+      "hits": 15,
+      "hit_rate": 34.1,
       "best": 15390,
       "rank": "D",
       "emoji": "💀",
       "desc": "1番人気が過剰人気。逆張りで穴馬AIを使う。"
     },
     {
-      "races": 53,
-      "roi": 110.2,
-      "profit": 13490,
-      "hits": 19,
-      "hit_rate": 35.8,
-      "best": 68220,
+      "races": 19,
+      "roi": 28.8,
+      "profit": -33830,
+      "hits": 5,
+      "hit_rate": 26.3,
+      "best": 2720,
       "rank": "Y",
       "emoji": "🔥",
       "desc": "中穴波乱。1人気軸から広く流す。"
     },
     {
-      "races": 9,
-      "roi": 368.5,
-      "profit": 65240,
-      "hits": 5,
-      "hit_rate": 55.6,
-      "best": 39860,
+      "races": 3,
+      "roi": 270.2,
+      "profit": 13790,
+      "hits": 2,
+      "hit_rate": 66.7,
+      "best": 15270,
       "rank": "Z",
       "emoji": "💣",
       "desc": "小穴波乱。回収率368%と最強ランク。少点数で一発狙い。"
-    },
-    {
-      "races": 2,
-      "roi": 357.5,
-      "profit": 11330,
-      "hits": 2,
-      "hit_rate": 100.0,
-      "best": 6590,
-      "rank": "C",
-      "emoji": "🗑️",
-      "desc": "AIが見送り推奨のレース。購入しない。"
     }
   ],
   "top_hits": [
-    {
-      "rank": "S",
-      "emoji": "🥇",
-      "invest": 13000,
-      "ret": 295280,
-      "profit": 282280,
-      "roi": 2271.0,
-      "date": "2026-05-03"
-    },
-    {
-      "rank": "SS",
-      "emoji": "👑",
-      "invest": 1000,
-      "ret": 196260,
-      "profit": 195260,
-      "roi": 19626.0,
-      "date": "2026-04-26"
-    },
     {
       "rank": "SX",
       "emoji": "👑💥",
@@ -315,24 +250,6 @@
       "date": "2026-04-12"
     },
     {
-      "rank": "SA",
-      "emoji": "🥇🔥",
-      "invest": 1200,
-      "ret": 90590,
-      "profit": 89390,
-      "roi": 7549.0,
-      "date": "2026-04-18"
-    },
-    {
-      "rank": "Y",
-      "emoji": "🔥",
-      "invest": 2500,
-      "ret": 70720,
-      "profit": 68220,
-      "roi": 2829.0,
-      "date": "2026-05-03"
-    },
-    {
       "rank": "A",
       "emoji": "🥈",
       "invest": 1200,
@@ -345,75 +262,84 @@
       "rank": "SX",
       "emoji": "👑💥",
       "invest": 2800,
-      "ret": 45410,
-      "profit": 42610,
-      "roi": 1622.0,
-      "date": "2026-05-02"
+      "ret": 22810,
+      "profit": 20010,
+      "roi": 815.0,
+      "date": "2026-03-21"
+    },
+    {
+      "rank": "D",
+      "emoji": "💀",
+      "invest": 700,
+      "ret": 16090,
+      "profit": 15390,
+      "roi": 2299.0,
+      "date": "2026-03-22"
     },
     {
       "rank": "Z",
       "emoji": "💣",
       "invest": 2700,
-      "ret": 42560,
-      "profit": 39860,
-      "roi": 1576.0,
-      "date": "2026-04-19"
+      "ret": 17970,
+      "profit": 15270,
+      "roi": 666.0,
+      "date": "2026-03-29"
     },
     {
       "rank": "SX",
       "emoji": "👑💥",
       "invest": 2800,
-      "ret": 40160,
-      "profit": 37360,
-      "roi": 1434.0,
-      "date": "2026-05-03"
+      "ret": 15160,
+      "profit": 12360,
+      "roi": 541.0,
+      "date": "2026-04-12"
+    },
+    {
+      "rank": "S",
+      "emoji": "🥇",
+      "invest": 13000,
+      "ret": 24040,
+      "profit": 11040,
+      "roi": 185.0,
+      "date": "2026-03-29"
+    },
+    {
+      "rank": "SX",
+      "emoji": "👑💥",
+      "invest": 2800,
+      "ret": 12940,
+      "profit": 10140,
+      "roi": 462.0,
+      "date": "2026-04-11"
+    },
+    {
+      "rank": "A",
+      "emoji": "🥈",
+      "invest": 1000,
+      "ret": 10180,
+      "profit": 9180,
+      "roi": 1018.0,
+      "date": "2026-03-29"
     }
   ],
   "places": [
     {
-      "races": 112,
-      "roi": 246.5,
-      "profit": 288740,
-      "hits": 37,
-      "hit_rate": 33.0,
-      "best": 282280,
-      "place": "京都"
-    },
-    {
-      "races": 68,
-      "roi": 226.8,
-      "profit": 180480,
-      "hits": 23,
-      "hit_rate": 33.8,
-      "best": 195260,
-      "place": "福島"
-    },
-    {
-      "races": 97,
-      "roi": 190.4,
-      "profit": 192650,
-      "hits": 33,
-      "hit_rate": 34.0,
-      "best": 143000,
-      "place": "阪神"
-    },
-    {
-      "races": 89,
-      "roi": 167.1,
-      "profit": 129480,
-      "hits": 33,
-      "hit_rate": 37.1,
+      "races": 72,
+      "roi": 191.1,
+      "profit": 138160,
+      "hits": 29,
+      "hit_rate": 40.3,
       "best": 151140,
       "place": "中山"
     },
     {
-      "races": 125,
-      "roi": 134.0,
-      "profit": 80760,
-      "hits": 51,
-      "hit_rate": 40.8,
-      "best": 68220,
-      "place": "東京"
+      "races": 77,
+      "roi": 141.3,
+      "profit": 73940,
+      "hits": 24,
+      "hit_rate": 31.2,
+      "best": 143000,
+      "place": "阪神"
     },
     {
       "races": 26,
@@ -425,307 +351,307 @@
       "place": "中京"
     },
     {
-      "races": 63,
-      "roi": 54.2,
-      "profit": -56670,
-      "hits": 13,
-      "hit_rate": 20.6,
-      "best": 17330,
-      "place": "新潟"
+      "races": 27,
+      "roi": 71.6,
+      "profit": -12620,
+      "hits": 8,
+      "hit_rate": 29.6,
+      "best": 10140,
+      "place": "福島"
     }
   ],
   "by_rnum": [
     {
-      "races": 45,
-      "roi": 43.9,
-      "profit": -38680,
-      "hits": 12,
-      "hit_rate": 26.7,
-      "best": 5450,
+      "races": 15,
+      "roi": 52.9,
+      "profit": -8190,
+      "hits": 6,
+      "hit_rate": 40.0,
+      "best": 3360,
       "rnum": 1
     },
     {
-      "races": 44,
-      "roi": 367.5,
-      "profit": 267750,
-      "hits": 17,
-      "hit_rate": 38.6,
-      "best": 282280,
+      "races": 15,
+      "roi": 16.4,
+      "profit": -32350,
+      "hits": 5,
+      "hit_rate": 33.3,
+      "best": 510,
       "rnum": 2
     },
     {
-      "races": 44,
-      "roi": 36.4,
-      "profit": -45320,
-      "hits": 15,
-      "hit_rate": 34.1,
-      "best": 2700,
+      "races": 15,
+      "roi": 25.7,
+      "profit": -16800,
+      "hits": 5,
+      "hit_rate": 33.3,
+      "best": 240,
       "rnum": 3
     },
     {
-      "races": 45,
-      "roi": 54.4,
-      "profit": -47270,
-      "hits": 17,
-      "hit_rate": 37.8,
-      "best": 8080,
+      "races": 15,
+      "roi": 36.8,
+      "profit": -28320,
+      "hits": 4,
+      "hit_rate": 26.7,
+      "best": 4630,
       "rnum": 4
     },
     {
-      "races": 47,
-      "roi": 339.5,
-      "profit": 212920,
-      "hits": 18,
-      "hit_rate": 38.3,
-      "best": 195260,
+      "races": 18,
+      "roi": 73.7,
+      "profit": -9510,
+      "hits": 5,
+      "hit_rate": 27.8,
+      "best": 12360,
       "rnum": 5
     },
     {
-      "races": 47,
-      "roi": 365.4,
-      "profit": 231410,
-      "hits": 21,
-      "hit_rate": 44.7,
+      "races": 18,
+      "roi": 719.2,
+      "profit": 227250,
+      "hits": 9,
+      "hit_rate": 50.0,
       "best": 151140,
       "rnum": 6
     },
     {
-      "races": 47,
-      "roi": 157.7,
-      "profit": 55320,
-      "hits": 24,
-      "hit_rate": 51.1,
-      "best": 42610,
+      "races": 18,
+      "roi": 175.6,
+      "profit": 18670,
+      "hits": 11,
+      "hit_rate": 61.1,
+      "best": 10140,
       "rnum": 7
     },
     {
-      "races": 48,
-      "roi": 103.5,
-      "profit": 3190,
-      "hits": 15,
-      "hit_rate": 31.2,
-      "best": 23150,
+      "races": 16,
+      "roi": 88.9,
+      "profit": -3620,
+      "hits": 4,
+      "hit_rate": 25.0,
+      "best": 11040,
       "rnum": 8
     },
     {
-      "races": 49,
-      "roi": 220.6,
-      "profit": 166120,
-      "hits": 21,
-      "hit_rate": 42.9,
+      "races": 14,
+      "roi": 275.1,
+      "profit": 100670,
+      "hits": 5,
+      "hit_rate": 35.7,
       "best": 143000,
       "rnum": 9
     },
     {
-      "races": 50,
-      "roi": 82.7,
-      "profit": -16470,
-      "hits": 13,
-      "hit_rate": 26.0,
-      "best": 15510,
+      "races": 15,
+      "roi": 22.0,
+      "profit": -16700,
+      "hits": 3,
+      "hit_rate": 20.0,
+      "best": 740,
       "rnum": 10
     },
     {
-      "races": 63,
-      "roi": 167.5,
-      "profit": 80080,
-      "hits": 13,
-      "hit_rate": 20.6,
-      "best": 89390,
+      "races": 27,
+      "roi": 63.5,
+      "profit": -17100,
+      "hits": 6,
+      "hit_rate": 22.2,
+      "best": 20010,
       "rnum": 11
     },
     {
-      "races": 51,
-      "roi": 35.6,
-      "profit": -58780,
-      "hits": 11,
-      "hit_rate": 21.6,
+      "races": 16,
+      "roi": 50.4,
+      "profit": -19690,
+      "hits": 5,
+      "hit_rate": 31.2,
       "best": 3420,
       "rnum": 12
     }
   ],
   "by_track": [
     {
-      "races": 296,
-      "roi": 173.0,
-      "profit": 450270,
-      "hits": 109,
-      "hit_rate": 36.8,
-      "best": 195260,
+      "races": 103,
+      "roi": 160.7,
+      "profit": 134240,
+      "hits": 35,
+      "hit_rate": 34.0,
+      "best": 143000,
       "track": "芝"
     },
     {
-      "races": 283,
-      "roi": 168.1,
-      "profit": 361720,
-      "hits": 87,
-      "hit_rate": 30.7,
-      "best": 282280,
+      "races": 99,
+      "roi": 130.4,
+      "profit": 60070,
+      "hits": 33,
+      "hit_rate": 33.3,
+      "best": 151140,
       "track": "ダート"
     }
   ],
   "by_dist": [
     {
-      "races": 105,
-      "roi": 55.0,
-      "profit": -87080,
-      "hits": 25,
-      "hit_rate": 23.8,
-      "best": 23150,
+      "races": 47,
+      "roi": 39.5,
+      "profit": -44390,
+      "hits": 10,
+      "hit_rate": 21.3,
+      "best": 15270,
       "label": "〜1200m短距離"
     },
     {
-      "races": 169,
-      "roi": 107.6,
-      "profit": 24080,
-      "hits": 52,
-      "hit_rate": 30.8,
-      "best": 42610,
+      "races": 41,
+      "roi": 47.6,
+      "profit": -43250,
+      "hits": 11,
+      "hit_rate": 26.8,
+      "best": 4430,
       "label": "〜1600mマイル"
     },
     {
-      "races": 230,
-      "roi": 288.9,
-      "profit": 901540,
-      "hits": 94,
-      "hit_rate": 40.9,
-      "best": 282280,
+      "races": 92,
+      "roi": 241.1,
+      "profit": 293590,
+      "hits": 38,
+      "hit_rate": 41.3,
+      "best": 151140,
       "label": "〜2000m中距離"
     },
     {
-      "races": 76,
-      "roi": 82.7,
-      "profit": -28270,
-      "hits": 26,
-      "hit_rate": 34.2,
-      "best": 26320,
+      "races": 22,
+      "roi": 78.8,
+      "profit": -11640,
+      "hits": 9,
+      "hit_rate": 40.9,
+      "best": 12360,
       "label": "2001m〜長距離"
     }
   ],
   "rolling": [
     {
       "i": 29,
-      "roi": 87.5
+      "roi": 276.6
     },
     {
       "i": 30,
-      "roi": 86.2
+      "roi": 272.0
     },
     {
       "i": 31,
-      "roi": 87.0
+      "roi": 259.0
     },
     {
       "i": 32,
-      "roi": 103.1
+      "roi": 258.0
     },
     {
       "i": 33,
-      "roi": 143.0
+      "roi": 257.6
     },
     {
       "i": 34,
-      "roi": 144.6
+      "roi": 258.8
     },
     {
       "i": 35,
-      "roi": 142.1
+      "roi": 256.7
     },
     {
       "i": 36,
-      "roi": 139.2
+      "roi": 255.5
     },
     {
       "i": 37,
-      "roi": 134.8
+      "roi": 278.8
     },
     {
       "i": 38,
-      "roi": 141.0
+      "roi": 264.4
     },
     {
       "i": 39,
-      "roi": 142.1
+      "roi": 273.5
     },
     {
       "i": 40,
-      "roi": 151.3
+      "roi": 273.8
     },
     {
       "i": 41,
-      "roi": 154.5
+      "roi": 54.7
     },
     {
       "i": 42,
-      "roi": 153.5
+      "roi": 57.2
     },
     {
       "i": 43,
-      "roi": 136.8
+      "roi": 59.6
     },
     {
       "i": 44,
-      "roi": 140.5
+      "roi": 58.9
     },
     {
       "i": 45,
-      "roi": 138.8
+      "roi": 58.9
     },
     {
       "i": 46,
-      "roi": 141.8
+      "roi": 49.7
     },
     {
       "i": 47,
-      "roi": 151.5
+      "roi": 51.1
     },
     {
       "i": 48,
-      "roi": 120.2
+      "roi": 46.4
     },
     {
       "i": 49,
-      "roi": 114.2
+      "roi": 47.1
     },
     {
       "i": 50,
-      "roi": 112.2
+      "roi": 48.0
     },
     {
       "i": 51,
-      "roi": 112.9
+      "roi": 48.5
     },
     {
       "i": 52,
-      "roi": 111.7
+      "roi": 39.1
     },
     {
       "i": 53,
-      "roi": 103.6
+      "roi": 39.6
     },
     {
       "i": 54,
-      "roi": 103.5
+      "roi": 39.6
     },
     {
       "i": 55,
-      "roi": 104.6
+      "roi": 46.1
     },
     {
       "i": 56,
-      "roi": 103.9
+      "roi": 48.6
     },
     {
       "i": 57,
-      "roi": 108.4
+      "roi": 49.7
     },
     {
       "i": 58,
-      "roi": 110.1
+      "roi": 50.6
     },
     {
       "i": 59,
-      "roi": 114.3
+      "roi": 50.8
     }
   ]
 }
